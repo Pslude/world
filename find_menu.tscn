@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc376lnptakjt"]
+
+[ext_resource type="PackedScene" uid="uid://bk5bftmijlegf" path="res://sub_menu.tscn" id="1_2x7xm"]
+
+[node name="FindGameMenu" instance=ExtResource("1_2x7xm")]
+
+[node name="StatusLabel" type="Label" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+text = "Searching for a fun game just for you..."
+horizontal_alignment = 1

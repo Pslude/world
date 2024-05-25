@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cm4aorlq8b5f7"]
+
+[ext_resource type="PackedScene" uid="uid://bk5bftmijlegf" path="res://sub_menu.tscn" id="1_0i1bv"]
+
+[node name="OptionsMenu" instance=ExtResource("1_0i1bv")]
+
+[node name="FullscreenCheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+text = "Fullscreen"
+
+[connection signal="toggled" from="MarginContainer/VBoxContainer/FullscreenCheckBox" to="." method="_on_fullscreen_check_box_toggled"]

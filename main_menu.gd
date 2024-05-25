@@ -3,7 +3,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	# focus this on ready so the menu can be controlled by keyboard
+	# focus a button on ready so the menu can be controlled by keyboard
 	$VBoxContainer/FindButton.grab_focus()
 
 
@@ -11,23 +11,20 @@ func _ready():
 func _process(delta):
 	pass
 
-
 func _on_find_button_pressed():
-	pass # Replace with function body.
-	#get_tree.change_scene()
-
+	get_tree().change_scene_to_file("res://find_menu.tscn")
 
 func _on_join_button_pressed():
-	pass # Replace with function body.
-
+	get_tree().change_scene_to_file("res://join_menu.tscn")
 
 func _on_host_button_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://host_menu.tscn")
 
+func _on_sandbox_button_pressed():
+	get_tree().change_scene_to_file("res://play.tscn")
 
 func _on_options_button_pressed():
-	pass # Replace with function body.
-
+	get_tree().change_scene_to_file("res://options_menu.tscn")
 
 func _on_quit_button_pressed():
 	get_tree().quit()

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cxa60o338prer"]
+
+[node name="Play" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 283.0
+offset_top = 158.0
+offset_right = 939.0
+offset_bottom = 517.0
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 104.0
+offset_right = 550.0
+offset_bottom = 273.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "this is the game..."
