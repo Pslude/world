@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3 uid="uid://baqey4gcypypk"]
+
+[ext_resource type="Script" path="res://scenes/ExitButton.gd" id="1_yxv0m"]
+
+[node name="MainMenu" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="PreTitle" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Pslude presents..."
+
+[node name="Title" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 128
+text = "Waiting"
+
+[node name="PostTitle" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "for Godot 4"
+horizontal_alignment = 2
+
+[node name="FindGameButton" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Find Game :D"
+
+[node name="BrowseGamesButton" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Browse Games :o"
+
+[node name="JoinGameButton" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Join Game :p"
+
+[node name="HostGameButton" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Host Game :<>"
+
+[node name="ExitButton" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Exit :("
+script = ExtResource("1_yxv0m")
+
+[node name="Version" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "version 0.0.1-alpha"
+horizontal_alignment = 2
+
+[node name="Copyright" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "© 2024 Dylan Ferris
+"
+horizontal_alignment = 2
