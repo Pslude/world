@@ -16,20 +16,11 @@ func _input(event):
 	if Input.is_action_pressed("ui_cancel"):
 		get_tree().quit()
 
-func _on_find_button_pressed():
-	get_tree().change_scene_to_file("res://find_menu.tscn")
+func _on_login_button_pressed():
+	get_tree().change_scene_to_file("res://login_menu.tscn")
 
 func _on_join_button_pressed():
 	get_tree().change_scene_to_file("res://join_menu.tscn")
-
-func _on_host_button_pressed():
-	get_tree().change_scene_to_file("res://host_menu.tscn")
-
-func _on_sandbox_button_pressed():
-	get_tree().change_scene_to_file("res://play.tscn")
-
-func _on_options_button_pressed():
-	get_tree().change_scene_to_file("res://options_menu.tscn")
 
 func _on_quit_button_pressed():
 	get_tree().quit()

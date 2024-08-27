@@ -8,10 +8,11 @@ const CONFIG_FILE_PATH = "user://options.cfg"
 func _ready():
 	
 	# Load data from a file.
-	var err = config.load(CONFIG_FILE_PATH)
+	var config_load_err = config.load(CONFIG_FILE_PATH)
 	
 	# If the file didn't load, ignore it.
-	if err != OK:
+	if config_load_err != OK:
+		print("Error loading config file ", CONFIG_FILE_PATH, " error=", config_load_err)
 		return
 	
 	# Apply options from loaded config file.
