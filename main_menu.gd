@@ -1,11 +1,9 @@
 extends Control
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# focus a button on ready so the menu can be controlled by keyboard
 	$VBoxContainer/FindButton.grab_focus()
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -29,7 +27,7 @@ func _on_host_button_pressed():
 	get_tree().change_scene_to_file("res://host_menu.tscn")
 
 func _on_sandbox_button_pressed():
-	get_tree().change_scene_to_file("res://sub_menu.tscn")
+	get_tree().change_scene_to_file("res://sandbox.tscn")
 
 func _on_options_button_pressed():
 	get_tree().change_scene_to_file("res://options_menu.tscn")
