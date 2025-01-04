@@ -10,3 +10,9 @@ script = ExtResource("2_cimhc")
 layout_mode = 2
 text = "Init..."
 fit_content = true
+
+[node name="ServersGrid" type="GridContainer" parent="MarginContainer/VBoxContainer" index="2"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ServersGrid" index="0"]
+layout_mode = 2
