@@ -3,6 +3,8 @@ extends "res://sub_menu.gd"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print("OPTIONS MENU is _ready()")
+	
 	# Focus keyboard on a button
 	$MarginContainer/VBoxContainer/CloseButton.grab_focus()
 	

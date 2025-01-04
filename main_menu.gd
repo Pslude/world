@@ -2,9 +2,10 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print("MAIN MENU is _ready()")
 	# focus a button on ready so the menu can be controlled by keyboard
 	$VBoxContainer/FindButton.grab_focus()
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
