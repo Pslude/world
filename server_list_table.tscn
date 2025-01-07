@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1dcfbgnqgpus"]
+
+[ext_resource type="PackedScene" uid="uid://bgi200qvhpseo" path="res://table.tscn" id="1_lgt52"]
+[ext_resource type="Script" path="res://server_list_table.gd" id="2_gjw5m"]
+
+[node name="ServerListTable" instance=ExtResource("1_lgt52")]
+script = ExtResource("2_gjw5m")

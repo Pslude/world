@@ -4,6 +4,7 @@ extends "res://sub_menu.gd"
 func _ready() -> void:
 	print("JOIN MENU is _ready()")
 	
+	$MarginContainer/VBoxContainer/StatusRichTextLabel.text = 'Finding servers...'
 	var http_request = HTTPRequest.new()
 	add_child(http_request)
 	http_request.request_completed.connect(self._http_request_completed)
@@ -14,9 +15,10 @@ func _ready() -> void:
 		push_error("An error occurred in the HTTP request.")
 	
 func update_server_list(servers):
-	print(servers)
-	$MarginContainer/VBoxContainer/Table.data = servers
-	$MarginContainer/VBoxContainer/Table.Render()
+	# print(servers)
+	$MarginContainer/VBoxContainer/ServerListPanel/ServerListTable.data = servers
+	$MarginContainer/VBoxContainer/ServerListPanel/ServerListTable.Render()
+	# @ref https://youtu.be/kM329STAi80?t=622
 	
 # Called when the HTTP request is completed.
 func _http_request_completed(_result, response_code, _headers, body):
@@ -41,10 +43,13 @@ func _http_request_completed(_result, response_code, _headers, body):
 	if "results" not in body_data:
 		OS.alert("Server response does not contain 'results' in JSON data.", "Server Error")
 		get_tree().change_scene_to_file("res://main_menu.tscn")
-	
+
+	$MarginContainer/VBoxContainer/StatusRichTextLabel.text = \
+	  ("%d server found." if body_data["count"] == 1 else "%d servers found.") \
+	 % body_data["count"]
 	update_server_list(body_data["results"])
 	
-
+	
 # Called every frame. "delta" is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass

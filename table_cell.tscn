@@ -1,4 +1,11 @@
-[gd_scene format=3 uid="uid://bi67yc0ooxn0q"]
+[gd_scene load_steps=2 format=3 uid="uid://bi67yc0ooxn0q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e3evd"]
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
 
 [node name="TableCell" type="Label"]
 anchors_preset = 15
@@ -8,6 +15,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_e3evd")
 text = "cell"
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -13,11 +13,10 @@ func _ready():
 	# If the file didn't load, ignore it.
 	if config_load_err != OK:
 		print("Error loading config file ", CONFIG_FILE_PATH, " error=", config_load_err)
-		return
-	
-	# Apply options from loaded config file.
-	if config.get_value("video", "fullscreen"):
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:	
+		# Apply options from loaded config file.
+		if config.get_value("video", "fullscreen"):
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
