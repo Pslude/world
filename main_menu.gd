@@ -16,7 +16,7 @@ func _input(event):
 		get_tree().quit()
 
 func _on_find_button_pressed():
-	get_tree().change_scene_to_file("res://sub_menu.tscn")
+	get_tree().change_scene_to_file("res://find_menu.tscn")
 
 func _on_login_button_pressed():
 	get_tree().change_scene_to_file("res://auth_menu.tscn")

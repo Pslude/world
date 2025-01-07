@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b1sv4fo5darmg"]
+
+[node name="TableRowButton" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Button"

@@ -12,4 +12,5 @@ func _process(delta):
 
 
 func _on_start_server_button_pressed():
-	pass # Replace with function body.
+	print('Starting server...')
+	get_tree().change_scene_to_file("res://sandbox.tscn")
