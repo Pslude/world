@@ -1,14 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://cigtk5g6075bn"]
+[gd_scene load_steps=4 format=3 uid="uid://cigtk5g6075bn"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_dpxy8"]
 
-[node name="MainMenu" type="Control"]
-layout_mode = 3
+[sub_resource type="Gradient" id="Gradient_x3103"]
+colors = PackedColorArray(0, 0.192157, 0, 1, 0.839216, 0.631373, 0.698039, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_owtjs"]
+gradient = SubResource("Gradient_x3103")
+fill_from = Vector2(0.279817, 0.899083)
+fill_to = Vector2(0.545872, 0)
+
+[node name="MainMenu" type="TextureRect"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = SubResource("GradientTexture2D_owtjs")
 script = ExtResource("1_dpxy8")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -28,7 +36,7 @@ grow_vertical = 2
 [node name="Title" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
-text = "Waiting..."
+text = "World"
 horizontal_alignment = 1
 
 [node name="FindButton" type="Button" parent="VBoxContainer"]

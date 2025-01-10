@@ -3,3 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://hta4j2t2x6fn" path="res://game.tscn" id="1_0ru2g"]
 
 [node name="Game" instance=ExtResource("1_0ru2g")]
+
+[node name="Label" parent="." index="0"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_alignment = 1
+vertical_alignment = 1
